@@ -1,20 +1,20 @@
-import java.util.Arrays;
-
-public class Main {
+public class Main  {
     public static void main(String[] args) {
-        char[] input={'a','b','c','D','e'};
-        convertToUppercase(input);
-        System.out.println(Arrays.toString(input));
+        String input="Hello World";
+        System.out.println(covertToUppercase(input));
     }
 
-    private static void convertToUppercase(char[] input) {
-        for(int i = 0, e = input.length; i<e; ++i){
-            if(Character.isLetter(input[i]) && Character.isLowerCase(input[i])) {
-                input[i] = (char) (input[i] - 32);
+    private static String covertToUppercase(String input) {
+        char[] inputArray= input.toCharArray();
+        for(int i=0,e=inputArray.length;i<e;++i){
+            input ="";
+            if(Character.isLetter(inputArray[i]) && Character.isLowerCase(inputArray[i])){
+                inputArray[i]=(char)(inputArray[i]-32);
             }
         }
+        String result =new String(inputArray);
+        return result;
     }
 }
-
 
 
